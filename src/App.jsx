@@ -108,7 +108,7 @@ export default function App() {
         <div className="w-full max-w-md bg-card border border-border rounded-xl shadow-lg p-8">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-primary mb-2 italic">MailFlow</h1>
-            <p className="text-sm opacity-60">ลงชื่อเข้าใช้ด้วยบัญชี Rambler.ru ของคุณ</p>
+            <p className="text-sm opacity-60">ลงชื่อเข้าใช้ด้วยบัญชี Unipony ของคุณ</p>
           </div>
           
           <form onSubmit={handleLogin} className="space-y-5">
