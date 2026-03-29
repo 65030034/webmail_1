@@ -119,7 +119,7 @@ export default function App() {
                 value={loginEmail} 
                 onChange={(e) => setLoginEmail(e.target.value)} 
                 className="w-full px-4 py-2 bg-background border border-border rounded-md focus:ring-2 focus:ring-primary/40 outline-none transition-all" 
-                placeholder="example@rambler.ru" // เพิ่ม Text ตัวอย่าง
+                placeholder="" // ลบตัวอย่างออก
                 required 
                 autoComplete="off" 
               />
@@ -131,7 +131,7 @@ export default function App() {
                 value={loginPassword} 
                 onChange={(e) => setLoginPassword(e.target.value)} 
                 className="w-full px-4 py-2 bg-background border border-border rounded-md focus:ring-2 focus:ring-primary/40 outline-none transition-all" 
-                placeholder="••••••••" // เพิ่ม Text ตัวอย่าง
+                placeholder="Password" // เปลี่ยนเป็นคำทั่วไป
                 required 
                 autoComplete="new-password" 
               />
