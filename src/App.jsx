@@ -229,14 +229,23 @@ export default function App() {
                     <div className="text-sm text-gray-400 font-medium">{new Date(selectedEmailData?.date).toLocaleString('th-TH', { dateStyle: 'long', timeStyle: 'short' })}</div>
                   </div>
                 </div>
-                <div className="text-[#334155] leading-relaxed whitespace-pre-wrap break-words font-sans text-[16px] min-h-[400px]">
+                
+                {/* 👇 แก้ไขส่วนนี้เพื่อแสดง HTML อย่างถูกต้อง */}
+                <div className="text-[#334155] leading-relaxed break-words font-sans text-[16px] min-h-[400px]">
                   {contentLoading ? (
                     <div className="flex items-center gap-3 text-[#0070f3] font-bold animate-pulse py-10">
                       <div className="w-5 h-5 border-2 border-[#0070f3] border-t-transparent rounded-full animate-spin"></div>
                       <span>กำลังดึงเนื้อหาจากเซิร์ฟเวอร์...</span>
                     </div>
-                  ) : emailContent}
+                  ) : (
+                    <div 
+                      dangerouslySetInnerHTML={{ __html: emailContent }} 
+                      className="mail-content-display"
+                    />
+                  )}
                 </div>
+                {/* 👆 สิ้นสุดส่วนที่แก้ไข */}
+
               </div>
             )}
           </div>
